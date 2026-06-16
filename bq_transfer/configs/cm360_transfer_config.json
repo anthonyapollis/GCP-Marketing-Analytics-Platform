@@ -1,0 +1,19 @@
+{
+  "_comment": "BigQuery Data Transfer Service — Campaign Manager 360 connector",
+  "_docs": "https://cloud.google.com/bigquery/docs/campaign-manager-transfer",
+  "transferConfig": {
+    "displayName": "Campaign Manager 360 — Marketing Platform",
+    "dataSourceId": "dcm_dt",
+    "destinationDatasetId": "marketing_bronze",
+    "params": {
+      "network_id": "{CM360_NETWORK_ID}",
+      "report_types": ["STANDARD","REACH","PATH_TO_CONVERSION","FLOODLIGHT"],
+      "include_yesterday": true
+    },
+    "schedule": "every 24 hours",
+    "scheduleOptions": { "startTime": "2024-01-01T05:00:00Z" },
+    "state": "ENABLED"
+  },
+  "_destination_table": "marketing_bronze.cm360_raw",
+  "_note": "CM360 provides impression, click, and conversion data at placement level. View-through and click-through conversions are both exported and unified in the Silver model."
+}

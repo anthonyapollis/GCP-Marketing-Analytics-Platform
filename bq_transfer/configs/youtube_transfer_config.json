@@ -1,0 +1,25 @@
+{
+  "_comment": "BigQuery Data Transfer Service — YouTube Channel Reports connector",
+  "_docs": "https://cloud.google.com/bigquery/docs/youtube-channel-reports-transfer",
+  "transferConfig": {
+    "displayName": "YouTube Analytics — Marketing Platform",
+    "dataSourceId": "youtube_channel",
+    "destinationDatasetId": "marketing_bronze",
+    "params": {
+      "channel_id": "{YOUTUBE_CHANNEL_ID}",
+      "report_types": [
+        "channel_basic_a2",
+        "channel_demographics_a1",
+        "channel_traffic_source_a2",
+        "channel_device_os_a2",
+        "channel_geo_area_a2"
+      ],
+      "youtube_targeting_type": "GEOGRAPHY"
+    },
+    "schedule": "every 24 hours",
+    "scheduleOptions": { "startTime": "2024-01-01T05:30:00Z" },
+    "state": "ENABLED"
+  },
+  "_destination_table": "marketing_bronze.youtube_raw",
+  "_note": "YouTube estimated_revenue_usd requires channel monetisation. Traffic source types: YT_SEARCH, SUGGESTED_VIDEOS, BROWSE_FEATURES, EXTERNAL. Silver model normalises these to canonical labels."
+}

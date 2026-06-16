@@ -1,0 +1,62 @@
+name: 'gcp_marketing_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'gcp_marketing'
+
+model-paths:      ["models"]
+analysis-paths:   ["analyses"]
+test-paths:       ["tests"]
+macro-paths:      ["macros"]
+snapshot-paths:   ["snapshots"]
+target-path:      "target"
+clean-targets:    ["target","dbt_packages"]
+
+vars:
+  project_id:       "{{ env_var('GCP_PROJECT_ID') }}"
+  bronze_dataset:   "marketing_bronze"
+  silver_dataset:   "marketing_silver"
+  gold_dataset:     "marketing_gold"
+  lookback_days:    3
+  start_date:       "2024-01-01"
+
+models:
+  gcp_marketing_analytics:
+    staging:
+      +schema:        "{{ var('silver_dataset') }}"
+      +materialized:  incremental
+      +tags:          ['silver']
+      +on_schema_change: sync_all_columns
+
+    marts:
+      marketing:
+        +schema:      "{{ var('gold_dataset') }}"
+        +materialized: table
+        +tags:        ['gold']
+      attribution:
+        +schema:      "{{ var('gold_dataset') }}"
+        +materialized: table
+        +tags:        ['gold','attribution']
+
+seeds:
+  gcp_marketing_analytics:
+    +schema: "marketing_reference"
+
+sources:
+  - name: bronze
+    database:  "{{ var('project_id') }}"
+    schema:    "{{ var('bronze_dataset') }}"
+    freshness:
+      warn_after:  {count: 25, period: hour}
+      error_after: {count: 49, period: hour}
+    tables:
+      - name: ga4_events_raw
+        loaded_at_field: _processed_at
+      - name: google_ads_raw
+        loaded_at_field: _processed_at
+      - name: cm360_raw
+        loaded_at_field: _processed_at
+      - name: dv360_raw
+        loaded_at_field: _processed_at
+      - name: youtube_raw
+        loaded_at_field: _processed_at

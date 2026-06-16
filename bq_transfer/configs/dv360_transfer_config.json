@@ -1,0 +1,19 @@
+{
+  "_comment": "BigQuery Data Transfer Service — Display & Video 360 connector",
+  "_docs": "https://cloud.google.com/bigquery/docs/dv360-transfer",
+  "transferConfig": {
+    "displayName": "DV360 — Marketing Platform",
+    "dataSourceId": "display_video",
+    "destinationDatasetId": "marketing_bronze",
+    "params": {
+      "partner_id": "{DV360_PARTNER_ID}",
+      "advertiser_id": "{DV360_ADVERTISER_ID}",
+      "include_audience_data": true
+    },
+    "schedule": "every 24 hours",
+    "scheduleOptions": { "startTime": "2024-01-01T05:15:00Z" },
+    "state": "ENABLED"
+  },
+  "_destination_table": "marketing_bronze.dv360_raw",
+  "_note": "DV360 exports line-item level performance. Revenue is in USD (account currency). audience_segment data helps with attribution modelling."
+}

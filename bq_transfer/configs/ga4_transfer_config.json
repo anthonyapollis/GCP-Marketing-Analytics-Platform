@@ -1,0 +1,29 @@
+{
+  "_comment": "BigQuery Data Transfer Service — GA4 Export connector config",
+  "_docs": "https://cloud.google.com/bigquery/docs/ga4-transfer",
+  "transferConfig": {
+    "name": "projects/{project_number}/locations/eu/transferConfigs/{config_id}",
+    "displayName": "GA4 Events — Marketing Platform",
+    "dataSourceId": "ga4_analytics",
+    "destinationDatasetId": "marketing_bronze",
+    "params": {
+      "property_id": "{GA4_PROPERTY_ID}",
+      "include_yesterday_data": true,
+      "export_type": "STREAMING_AND_BACKFILL",
+      "table_id_prefix": "ga4_events"
+    },
+    "schedule": "every 24 hours",
+    "scheduleOptions": {
+      "startTime": "2024-01-01T04:00:00Z",
+      "endTime": null
+    },
+    "state": "ENABLED",
+    "notificationPubsubTopic": "projects/{project_id}/topics/bq-transfer-notifications",
+    "emailPreferences": {
+      "enableFailureEmail": true
+    }
+  },
+  "_destination_table": "marketing_bronze.ga4_events_raw",
+  "_schema_note": "GA4 exports a nested/repeated schema. The Dataflow pipeline flattens this before loading into the Bronze validated table.",
+  "_data_note": "Raw GA4 events arrive with: nested params, mixed-type values, session-level and event-level data mixed. Bronze validation pipeline parses and routes to validated/quarantine tables."
+}

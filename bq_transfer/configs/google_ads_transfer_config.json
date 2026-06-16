@@ -1,0 +1,26 @@
+{
+  "_comment": "BigQuery Data Transfer Service — Google Ads connector config",
+  "_docs": "https://cloud.google.com/bigquery/docs/google-ads-transfer",
+  "transferConfig": {
+    "displayName": "Google Ads — Marketing Platform",
+    "dataSourceId": "adwords",
+    "destinationDatasetId": "marketing_bronze",
+    "params": {
+      "customer_id": "{GOOGLE_ADS_CUSTOMER_ID}",
+      "table_filter": "Campaign,AdGroup,Keyword,Ad,GeoPerformance,CampaignPerformance",
+      "exclude_removed_items": false
+    },
+    "schedule": "every 24 hours",
+    "scheduleOptions": {
+      "startTime": "2024-01-01T04:30:00Z"
+    },
+    "state": "ENABLED",
+    "emailPreferences": { "enableFailureEmail": true }
+  },
+  "_destination_tables": [
+    "marketing_bronze.google_ads_raw",
+    "marketing_bronze.google_ads_campaign_raw",
+    "marketing_bronze.google_ads_keyword_raw"
+  ],
+  "_note": "Google Ads DTS exports spend in micros (divide by 1,000,000 for ZAR). Currency code comes from account settings. Silver model (stg_google_ads.sql) handles conversion and normalisation."
+}
