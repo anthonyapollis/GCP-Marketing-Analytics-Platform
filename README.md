@@ -1,14 +1,68 @@
-# GCP Marketing Analytics Platform
+# Cape & Cart H1 Growth Campaign Analytics
 
-![Architecture](https://img.shields.io/badge/Architecture-Medallion_(Bronze%2FSilver%2FGold)-FFB300?style=flat-square)
-![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)
-![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
-![Cloud Dataflow](https://img.shields.io/badge/Cloud_Dataflow-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![Apache Beam](https://img.shields.io/badge/Apache_Beam-00A86B?style=flat-square&logo=apache&logoColor=white)
+![Case Study](https://img.shields.io/badge/Case_Study-Cape_%26_Cart_H1_Growth-0099B8?style=flat-square)
+![Currency](https://img.shields.io/badge/Currency-ZAR%20%2F%20Rand-00A86B?style=flat-square)
+![GCP](https://img.shields.io/badge/Primary_Platform-GCP%20%2B%20BigQuery-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![dbt](https://img.shields.io/badge/Transform-dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![Snowflake](https://img.shields.io/badge/Snowflake-Validation%20Layer-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
 ![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=flat-square&logo=python&logoColor=white)
 
-> **Production-grade GCP marketing data platform.** Ingests 5 advertising sources (GA4, Google Ads, CM360, DV360, YouTube) through a Bronze → Silver → Gold medallion pipeline. Dataflow validates raw data; dbt transforms and models it; Airflow orchestrates the daily DAG.
+> **Start here:** this repository is now a business case study for **Cape & Cart**, a South African ecommerce retailer running an H1 2024 growth campaign. The core deliverables are the BI dashboard, ebook, Excel workbook, cleaned transactional data, and ML outputs. The GCP folders are kept as the supporting platform blueprint, not as a separate competing project.
+
+## What This Project Is
+
+Cape & Cart needed to understand whether its H1 growth campaign was creating profitable local growth. The case study follows the data from dirty ecommerce transactions through Bronze, Silver, and Gold layers, then into BI dashboards and machine learning outputs.
+
+All commercial values are in **South African Rand (ZAR / R)** so revenue, ad spend, average order value, margin, and return on ad spend can be compared on the same business basis.
+
+## Open These First
+
+| Priority | File / Folder | Why it matters |
+|---|---|---|
+| 1 | `dashboard/bi_dashboard.html` | Main BI report with chart explanations, abbreviation guide, ZAR/Rand context, and action recommendations. |
+| 2 | `dashboard/gcp_dashboard.html` | Interactive GCP-style campaign dashboard. |
+| 3 | `ebook/gcp_ebook.html` | Narrative technical case study. |
+| 4 | `excel/GCP_Marketing_Analytics_Platform_v2.xlsx` | Excel workbook for stakeholder review. |
+| 5 | `data/` | Bronze, Silver, Gold, transactional, and ML-ready data used by the reports. |
+| 6 | `snowflake/` | Optional Snowflake setup pack used to validate portability and run warehouse-side analysis. |
+
+## Folder Map
+
+| Folder | Role |
+|---|---|
+| `dashboard/` | Final BI and campaign dashboards. |
+| `data/` | Raw dirty transactions, cleaned Silver tables, Gold product performance, and ML outputs. |
+| `ebook/` | Case-study document for readers who want the story and architecture. |
+| `excel/` | Generated workbook and workbook builder. |
+| `snowflake/` | Snowflake validation layer and load manifest. |
+| `gcp_platform_blueprint/` | Supporting GCP implementation blueprint: Airflow, BigQuery schemas, Dataflow, BigQuery Transfer configs, and dbt. |
+
+## Control Totals
+
+These are the figures the reports reconcile to:
+
+| Metric | Value |
+|---|---:|
+| Data period | January 1, 2024 to June 30, 2024 |
+| H1 revenue | R5,038,057.79 |
+| Orders | 12,100 |
+| Average Order Value (AOV) | R416.37 |
+| Customers | 10,350 |
+| Products | 30 |
+| Clean order items | 16,218 |
+| Clean campaign touchpoints | 1,886 |
+| Quarantined dirty rows | 964 |
+| ML customer scores | 10,350 |
+| ROAS forecast rows | 28 |
+
+## Platform Framing
+
+The project is presented as **GCP primary**:
+
+- **BigQuery / GCP** is the main platform story for ingestion, transformation, and reporting.
+- **dbt** models the Silver and Gold business layers.
+- **Airflow / Dataflow / BigQuery Transfer Service** are retained in `gcp_platform_blueprint/` as the deployable platform pattern.
+- **Snowflake** is included as an optional validation and portability layer to show that the same data story can be reproduced in another warehouse.
 
 ---
 
@@ -95,12 +149,12 @@ GCP-Marketing-Analytics-Platform/
 │   └── dags/
 │       └── marketing_pipeline_dag.py      Airflow 2.x DAG with TaskGroups
 │
-├── bigquery/
+├── gcp_platform_blueprint/bigquery/
 │   └── schema/
 │       ├── bronze/create_bronze_tables.sql  Permissive STRING schemas
 │       └── gold/create_gold_tables.sql      Typed + partitioned gold tables
 │
-├── bq_transfer/
+├── gcp_platform_blueprint/bq_transfer/
 │   └── configs/                            BQ Data Transfer JSON configs
 │       ├── ga4_transfer_config.json
 │       ├── google_ads_transfer_config.json
@@ -115,11 +169,11 @@ GCP-Marketing-Analytics-Platform/
 │       ├── google_ads_raw.csv              2 080 rows
 │       └── youtube_raw.csv                 1 545 rows
 │
-├── dataflow/
+├── gcp_platform_blueprint/dataflow/
 │   └── pipelines/
 │       └── bronze_validation_pipeline.py   Apache Beam DoFn validation
 │
-└── dbt/
+└── gcp_platform_blueprint/dbt/
     ├── dbt_project.yml                     Vars: bronze/silver/gold datasets
     └── models/
         ├── staging/                        SILVER models
@@ -174,13 +228,13 @@ cd data/bronze
 python generate_bronze_data.py
 
 # 2. Deploy Bronze DDL to BigQuery
-bq query --use_legacy_sql=false < bigquery/schema/bronze/create_bronze_tables.sql
+bq query --use_legacy_sql=false < gcp_platform_blueprint/bigquery/schema/bronze/create_bronze_tables.sql
 
 # 3. Deploy Gold DDL
-bq query --use_legacy_sql=false < bigquery/schema/gold/create_gold_tables.sql
+bq query --use_legacy_sql=false < gcp_platform_blueprint/bigquery/schema/gold/create_gold_tables.sql
 
 # 4. Install dbt dependencies
-cd dbt && pip install dbt-bigquery && dbt deps
+cd gcp_platform_blueprint/dbt && pip install dbt-bigquery && dbt deps
 
 # 5. Run Silver staging models
 dbt run --select staging
