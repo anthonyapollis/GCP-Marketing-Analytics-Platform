@@ -1,0 +1,29 @@
+channel,month,actual_roas,forecast_roas,lower_bound,upper_bound,model_id
+Google Ads,2024-01,4.00,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-02,4.10,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-03,4.20,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-04,4.30,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-05,4.40,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-06,4.20,,,,ml_channel_roas_forecast_v1
+Google Ads,2024-07,,4.30,3.95,4.65,ml_channel_roas_forecast_v1
+CM360,2024-01,3.50,,,,ml_channel_roas_forecast_v1
+CM360,2024-02,3.60,,,,ml_channel_roas_forecast_v1
+CM360,2024-03,3.80,,,,ml_channel_roas_forecast_v1
+CM360,2024-04,3.90,,,,ml_channel_roas_forecast_v1
+CM360,2024-05,3.70,,,,ml_channel_roas_forecast_v1
+CM360,2024-06,3.80,,,,ml_channel_roas_forecast_v1
+CM360,2024-07,,3.80,3.45,4.15,ml_channel_roas_forecast_v1
+DV360,2024-01,3.80,,,,ml_channel_roas_forecast_v1
+DV360,2024-02,3.60,,,,ml_channel_roas_forecast_v1
+DV360,2024-03,3.40,,,,ml_channel_roas_forecast_v1
+DV360,2024-04,3.20,,,,ml_channel_roas_forecast_v1
+DV360,2024-05,3.30,,,,ml_channel_roas_forecast_v1
+DV360,2024-06,3.40,,,,ml_channel_roas_forecast_v1
+DV360,2024-07,,2.80,2.45,3.15,ml_channel_roas_forecast_v1
+YouTube,2024-01,2.60,,,,ml_channel_roas_forecast_v1
+YouTube,2024-02,2.70,,,,ml_channel_roas_forecast_v1
+YouTube,2024-03,2.80,,,,ml_channel_roas_forecast_v1
+YouTube,2024-04,2.90,,,,ml_channel_roas_forecast_v1
+YouTube,2024-05,3.00,,,,ml_channel_roas_forecast_v1
+YouTube,2024-06,2.90,,,,ml_channel_roas_forecast_v1
+YouTube,2024-07,,3.50,3.15,3.85,ml_channel_roas_forecast_v1

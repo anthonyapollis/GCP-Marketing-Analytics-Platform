@@ -1,5 +1,5 @@
 """
-GCP Marketing Analytics Platform — Excel Report Generator
+Cape & Cart H1 Growth Campaign — Portfolio Scenario Excel Generator
 Dark-theme, insight-driven. Data consistent with dashboard and ebook.
 Run: pip install openpyxl && python generate_excel.py
 """
@@ -11,22 +11,22 @@ from openpyxl.utils import get_column_letter
 wb = Workbook()
 
 # ── PALETTE (dark analytics theme) ──────────────────────────────────────────
-DARK      = "0D1117"   # page / outer bg
-CARD      = "161B22"   # card background
-CARD2     = "1C2333"   # alt row
-BORDER_C  = "30363D"   # subtle borders
+DARK      = "F8FAFC"   # page / outer bg
+CARD      = "FFFFFF"   # card background
+CARD2     = "F1F5F9"   # alt row
+BORDER_C  = "CBD5E1"   # subtle borders
 
-TEAL      = "06B6D4"   # primary accent
-BLUE      = "3B82F6"   # Google Ads
-GREEN     = "10B981"   # CM360 / positive
-AMBER     = "F59E0B"   # Bronze / warning
-PURPLE    = "8B5CF6"   # DV360
-RED       = "EF4444"   # YouTube / alert
-PINK      = "EC4899"   # decoration
+TEAL      = "0891B2"   # primary accent
+BLUE      = "2563EB"   # Google Ads
+GREEN     = "16A34A"   # CM360 / positive
+AMBER     = "D97706"   # Bronze / warning
+PURPLE    = "7C3AED"   # DV360
+RED       = "DC2626"   # YouTube / alert
+PINK      = "DB2777"   # decoration
 
-WHITE     = "F1F5F9"   # bright body text
-MUTED     = "94A3B8"   # secondary text
-DIM       = "4B5563"   # labels
+WHITE     = "0F172A"   # bright body text
+MUTED     = "334155"   # secondary text
+DIM       = "64748B"   # labels
 
 # helpers ────────────────────────────────────────────────────────────────────
 def fill(hex_color):
@@ -98,32 +98,32 @@ for r in range(1, 10):
 
 ws1.merge_cells("B2:G2")
 c = ws1["B2"]
-c.value = "GCP Marketing Analytics Platform"
+c.value = "Cape & Cart H1 Growth Campaign — Portfolio Scenario Pack"
 c.font = font(bold=True, color=WHITE, size=22)
 c.alignment = align("left")
 c.fill = fill(DARK)
 
 ws1.merge_cells("B3:G3")
 c = ws1["B3"]
-c.value = "Technical Project Report  ·  Anthony Apollis  ·  2026"
+c.value = "Executive decision workbook  ·  1 Jan-30 Jun 2024 data  ·  Anthony Apollis"
 c.font = font(color=MUTED, size=11)
 c.alignment = align("left")
 c.fill = fill(DARK)
 
 ws1.merge_cells("B5:G5")
 c = ws1["B5"]
-c.value = "BigQuery · Apache Beam · dbt · Apache Airflow · GA4 · GTM · Cloud Dataflow"
+c.value = "Cape & Cart: Cape Town-born ecommerce retailer  ·  Six months  ·  R1.483M paid media spend"
 c.font = font(color=TEAL, size=10, italic=True)
 c.alignment = align("left")
 c.fill = fill(DARK)
 
 # KPI metric boxes
 kpi_data = [
-    ("523,480",  "Bronze Rows",     AMBER),
-    ("492,071",  "Silver Rows",     TEAL),
+    ("8,775",    "Repo Raw Rows",   AMBER),
+    ("523K",     "Modelled Rows",   TEAL),
     ("94.0%",    "DQ Pass Rate",    GREEN),
     ("3.8×",     "Blended ROAS",    GREEN),
-    ("R1.48M",   "Paid Spend",      PURPLE),
+    ("R1.483M",  "Paid Spend",      PURPLE),
     ("1,886",    "Conversions",     BLUE),
 ]
 for i, (val, lbl, clr) in enumerate(kpi_data):
@@ -147,7 +147,7 @@ ws1.row_dimensions[14].height = 20
 ws1.cell(14, 2).value = "CONTENTS"
 ws1.cell(14, 2).font = font(bold=True, color=TEAL, size=10)
 ws1.cell(14, 2).fill = fill(DARK)
-sheets_list = ["Cover","Pipeline Summary","Channel Performance","DQ Report","GA4 Events","Airflow DAG"]
+sheets_list = ["Cover","Executive Actions","Product Performance","ML Models","Pipeline Summary","Channel Performance","DQ Report","GA4 Events","Airflow DAG"]
 for i, s in enumerate(sheets_list):
     r = 15 + i
     ws1.row_dimensions[r].height = 16
@@ -163,7 +163,222 @@ for r in range(15, 30):
             ws1.cell(r, c_idx).fill = fill(DARK)
 
 # ────────────────────────────────────────────────────────────────────────────
-# SHEET 2 — PIPELINE SUMMARY
+# SHEET 2 — EXECUTIVE ACTIONS
+# ────────────────────────────────────────────────────────────────────────────
+ws0 = wb.create_sheet("Executive Actions")
+ws0.sheet_view.showGridLines = False
+ws0.sheet_properties.tabColor = GREEN
+set_col_widths(ws0, {"A":3,"B":26,"C":36,"D":28,"E":30,"F":20})
+
+section_title(ws0, 2, 2, "What I Would Do Monday Morning", GREEN)
+ws0.cell(2, 2).fill = fill(DARK)
+ws0.cell(3, 2).value = "This workbook is a budget decision brief for Cape & Cart, an anonymised portfolio scenario for a South African ecommerce H1 growth campaign: 1 Jan-30 Jun 2024."
+ws0.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
+ws0.cell(3, 2).fill = fill(DARK)
+
+ws0.merge_cells("B4:F4")
+ws0.cell(4, 2).value = "Company story: Cape & Cart began as a Cape Town marketplace for curated home, lifestyle, and everyday essentials. By H1 2024 it was scaling nationally, but leadership needed to know whether Search, YouTube, CM360, or DV360 deserved the next rand of budget."
+ws0.cell(4, 2).font = font(color=MUTED, size=9, italic=True)
+ws0.cell(4, 2).fill = fill(DARK)
+ws0.cell(4, 2).alignment = align("left", "center", True)
+ws0.row_dimensions[4].height = 42
+ws0.merge_cells("B5:F5")
+ws0.cell(5, 2).value = "Data scope: the repository contains 8,775 checked-in raw rows across GA4, Google Ads, and YouTube CSVs. The 523,480-row Bronze layer used in the report is a production-scale scenario metric for demonstrating the intended five-source architecture."
+ws0.cell(5, 2).font = font(color=MUTED, size=9, italic=True)
+ws0.cell(5, 2).fill = fill(DARK)
+ws0.cell(5, 2).alignment = align("left", "center", True)
+ws0.row_dimensions[5].height = 42
+
+header_row(ws0, 7, ["", "Decision", "Evidence", "Action", "Why it matters", "Owner"], GREEN)
+action_rows = [
+    ("", "Protect Search scale", "Google Ads ROAS 4.2x on R682K spend", "Increase budget only with marginal ROAS monitoring", "Search is strongest, but may be receiving credit created by YouTube", "Growth + Analytics"),
+    ("", "Do not cut YouTube yet", "2.9x last-click ROAS; 1.89M impressions", "Add view-through conversions before budget reduction", "Awareness is under-counted when last click gives Search the conversion", "Marketing Ops"),
+    ("", "Recover abandoned carts", "16.8K add-to-cart users did not purchase", "Export GA4 audience to DV360 and bid up on warm users", "This is the highest-intent audience not currently separated", "Lifecycle + Paid Media"),
+    ("", "Fix source quality", "31,409 rows quarantined; YouTube date/channel issues", "Correct transfer configuration and monitor reject reasons", "Bad rows are not noise; they are missing attribution evidence", "Data Engineering"),
+]
+for i, row in enumerate(action_rows):
+    r = 8 + i
+    data_row(ws0, r, row, alt=(i % 2 == 1), height=36)
+    for col in range(2, 7):
+        ws0.cell(r, col).alignment = align("left", "center", True)
+    ws0.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+
+section_title(ws0, 15, 2, "Trust Notes", AMBER)
+ws0.cell(15, 2).fill = fill(DARK)
+header_row(ws0, 17, ["", "Risk", "Control", "Business Meaning"], AMBER)
+trust_rows = [
+    ("", "Google Ads cost_micros", "Divide by 1,000,000 once in Silver", "Prevents ROAS from being destroyed by unit errors"),
+    ("", "Last-click attribution", "Add YouTube view-through metrics", "Stops awareness spend from looking weaker than it is"),
+    ("", "Consent Mode modelling", "Track consent-rate drift", "Keeps segment-level ROAS caveated when modelled data rises"),
+]
+for i, row in enumerate(trust_rows):
+    r = 18 + i
+    data_row(ws0, r, row, alt=(i % 2 == 1), height=32)
+    for col in range(2, 5):
+        ws0.cell(r, col).alignment = align("left", "center", True)
+    ws0.cell(r, 2).font = font(bold=True, color=AMBER, size=9)
+
+# ────────────────────────────────────────────────────────────────────────────
+# ────────────────────────────────────────────────────────────────────────────
+# SHEET 3 — PRODUCT PERFORMANCE
+# ────────────────────────────────────────────────────────────────────────────
+wsP = wb.create_sheet("Product Performance")
+wsP.sheet_view.showGridLines = False
+wsP.sheet_properties.tabColor = GREEN
+set_col_widths(wsP, {"A":3,"B":28,"C":22,"D":18,"E":14,"F":16,"G":12,"H":12})
+
+section_title(wsP, 2, 2, "Product Performance — Modelled Campaign Attribution", GREEN)
+wsP.cell(2, 2).fill = fill(DARK)
+wsP.cell(3, 2).value = "Product/order data now follows the documented ELT path: dirty Bronze ecommerce exports, 964 quarantined validation failures, clean Silver order lines, and Gold product performance for reporting."
+wsP.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
+wsP.cell(3, 2).fill = fill(DARK)
+
+header_row(wsP, 5, ["", "Product", "Category", "Lead Channel", "Spend", "Revenue", "ROAS", "Conv"], GREEN)
+top_product_rows = [
+    ("", "Bamboo Storage Set", "Home Organisation", "Google Ads", 28400, 144800, "5.1x", 312),
+    ("", "Loadshedding LED Lamp", "Home Essentials", "Google Ads", 22600, 106200, "4.7x", 241),
+    ("", "Cotton Bedding Bundle", "Bedroom", "CM360", 31800, 139900, "4.4x", 198),
+    ("", "Airtight Pantry Labels", "Kitchen", "Google Ads", 12800, 55000, "4.3x", 356),
+    ("", "Ceramic Dinner Set", "Kitchen", "CM360", 24600, 101900, "4.1x", 144),
+    ("", "Reusable Shopper Totes", "Lifestyle", "YouTube", 9600, 38400, "4.0x", 420),
+    ("", "Bath Towel Bundle", "Bathroom", "Google Ads", 21400, 81300, "3.8x", 187),
+    ("", "Desk Organiser", "Workspace", "DV360", 15800, 58400, "3.7x", 166),
+    ("", "Digital Kitchen Scale", "Kitchen", "Google Ads", 13200, 47500, "3.6x", 132),
+    ("", "Scented Candle Duo", "Lifestyle", "YouTube", 8800, 29000, "3.3x", 254)
+]
+for i, row in enumerate(top_product_rows):
+    r = 6 + i
+    data_row(wsP, r, row, alt=(i % 2 == 1), height=24)
+    wsP.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+    wsP.cell(r, 7).font = font(bold=True, color=GREEN, size=9)
+
+section_title(wsP, 18, 2, "Worst 10 Products — Pause, Fix, or Retest", RED)
+wsP.cell(18, 2).fill = fill(DARK)
+header_row(wsP, 20, ["", "Product", "Category", "Lead Channel", "Spend", "Revenue", "ROAS", "Conv"], RED)
+worst_product_rows = [
+    ("", "Outdoor Beanbag", "Outdoor", "DV360", 18200, 9100, "0.5x", 12),
+    ("", "Glass Terrarium", "Decor", "DV360", 9600, 6700, "0.7x", 18),
+    ("", "Luxury Throw Blanket", "Bedroom", "CM360", 15800, 14200, "0.9x", 21),
+    ("", "Kids Tee Bundle", "Lifestyle", "YouTube", 7400, 7200, "1.0x", 31),
+    ("", "Copper Water Bottle", "Kitchen", "DV360", 11300, 12500, "1.1x", 42),
+    ("", "Minimal Wall Clock", "Decor", "CM360", 8900, 10600, "1.2x", 19),
+    ("", "Round Pet Bed", "Pet", "DV360", 13400, 17400, "1.3x", 27),
+    ("", "Yoga Mat", "Wellness", "YouTube", 7800, 10900, "1.4x", 36),
+    ("", "Insulated Travel Mug", "Lifestyle", "DV360", 10100, 15100, "1.5x", 48),
+    ("", "Decorative Vase", "Decor", "CM360", 6200, 9900, "1.6x", 22)
+]
+for i, row in enumerate(worst_product_rows):
+    r = 21 + i
+    data_row(wsP, r, row, alt=(i % 2 == 1), height=24)
+    wsP.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+    wsP.cell(r, 7).font = font(bold=True, color=RED, size=9)
+
+bcP = BarChart()
+bcP.type = "bar"
+bcP.title = "Top Product Revenue"
+bcP.y_axis.title = "Revenue"
+bcP.add_data(Reference(wsP, min_col=6, min_row=5, max_row=15), titles_from_data=True)
+bcP.set_categories(Reference(wsP, min_col=2, min_row=6, max_row=15))
+bcP.series[0].graphicalProperties.solidFill = GREEN
+bcP.width = 16; bcP.height = 10
+wsP.add_chart(bcP, "J5")
+
+bcW = BarChart()
+bcW.type = "bar"
+bcW.title = "Worst Product ROAS"
+bcW.y_axis.title = "ROAS"
+for idx, row in enumerate(worst_product_rows, start=21):
+    roas = float(str(row[6]).replace("x", ""))
+    wsP.cell(idx, 9, roas)
+wsP.cell(20, 9, "ROAS numeric")
+bcW.add_data(Reference(wsP, min_col=9, min_row=20, max_row=30), titles_from_data=True)
+bcW.set_categories(Reference(wsP, min_col=2, min_row=21, max_row=30))
+bcW.series[0].graphicalProperties.solidFill = RED
+bcW.width = 16; bcW.height = 10
+wsP.add_chart(bcW, "J22")
+
+# ────────────────────────────────────────────────────────────────────────────
+# SHEET 4 — ML MODELS
+# ────────────────────────────────────────────────────────────────────────────
+wsML = wb.create_sheet("ML Models")
+wsML.sheet_view.showGridLines = False
+wsML.sheet_properties.tabColor = PURPLE
+set_col_widths(wsML, {"A":3,"B":28,"C":24,"D":18,"E":14,"F":14,"G":14,"H":14,"I":14})
+
+section_title(wsML, 2, 2, "ML Workbench — GCP Primary, Snowflake Validation", PURPLE)
+wsML.cell(2, 2).fill = fill(DARK)
+wsML.cell(3, 2).value = "GCP remains the primary platform. Snowflake is used as a validation workbench to prove the curated Silver/Gold data and ML conclusions are portable. Metrics may differ by engine, but features, labels, and windows must match."
+wsML.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
+wsML.cell(3, 2).fill = fill(DARK)
+
+header_row(wsML, 5, ["", "Use Case", "Best Algorithm", "AUC", "Accuracy", "Precision", "Recall", "F1", "Action"], PURPLE)
+ml_rows = [
+    ("", "Purchase Propensity", "Logistic Scorecard", 0.4565, 0.8109, 0.1878, 0.0202, 0.0364, "Do not scale yet; add behaviour features"),
+    ("", "Churn Risk", "Low-Value Lapse Rule", 0.5038, 0.3642, 0.8202, 0.2879, 0.4262, "Use only for cautious win-back/suppression tests"),
+]
+for i, row in enumerate(ml_rows):
+    r = 6 + i
+    data_row(wsML, r, row, alt=(i % 2 == 1), height=30)
+    for col in range(2, 10):
+        wsML.cell(r, col).alignment = align("left", "center", True)
+    wsML.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+
+section_title(wsML, 10, 2, "ROAS Forecast Algorithm Comparison", TEAL)
+wsML.cell(10, 2).fill = fill(DARK)
+header_row(wsML, 12, ["", "Algorithm", "MAE", "RMSE", "R2", "Read"], TEAL)
+roas_algo_rows = [
+    ("", "Trend Projection", 0.0981, 0.1238, 0.9429, "Winner — lowest RMSE and highest R2"),
+    ("", "Lag-1 Naive", 0.1300, 0.1378, 0.9292, "Strong simple baseline"),
+    ("", "Channel Average", 0.1250, 0.1516, 0.9156, "Stable but less responsive"),
+    ("", "Rolling-3 Average", 0.1592, 0.1862, 0.8709, "Too slow to react"),
+]
+for i, row in enumerate(roas_algo_rows):
+    r = 13 + i
+    data_row(wsML, r, row, alt=(i % 2 == 1), height=24)
+    wsML.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+
+section_title(wsML, 19, 2, "July Budget Forecast — Best Model", GREEN)
+wsML.cell(19, 2).fill = fill(DARK)
+header_row(wsML, 21, ["", "Channel", "June Actual ROAS", "July Predicted ROAS", "Action"], GREEN)
+forecast_rows = [
+    ("", "Google Ads", 4.2, 4.2571, "Scale +10%"),
+    ("", "CM360", 3.8, 3.8543, "Hold/test creative"),
+    ("", "DV360", 3.4, 3.3114, "Hold/test creative"),
+    ("", "YouTube", 2.9, 2.9714, "Reduce -15% and fix audience"),
+]
+for i, row in enumerate(forecast_rows):
+    r = 22 + i
+    data_row(wsML, r, row, alt=(i % 2 == 1), height=24)
+    wsML.cell(r, 2).font = font(bold=True, color=WHITE, size=9)
+
+bcClass = BarChart()
+bcClass.title = "Customer Model AUC"
+bcClass.y_axis.title = "AUC"
+bcClass.add_data(Reference(wsML, min_col=4, min_row=5, max_row=7), titles_from_data=True)
+bcClass.set_categories(Reference(wsML, min_col=2, min_row=6, max_row=7))
+bcClass.series[0].graphicalProperties.solidFill = PURPLE
+bcClass.width = 13; bcClass.height = 7
+wsML.add_chart(bcClass, "K5")
+
+bcErr = BarChart()
+bcErr.title = "ROAS RMSE — Lower Is Better"
+bcErr.y_axis.title = "RMSE"
+bcErr.add_data(Reference(wsML, min_col=4, min_row=12, max_row=16), titles_from_data=True)
+bcErr.set_categories(Reference(wsML, min_col=2, min_row=13, max_row=16))
+bcErr.series[0].graphicalProperties.solidFill = TEAL
+bcErr.width = 13; bcErr.height = 7
+wsML.add_chart(bcErr, "K18")
+
+bcML = BarChart()
+bcML.title = "July Predicted ROAS"
+bcML.y_axis.title = "ROAS"
+bcML.add_data(Reference(wsML, min_col=4, min_row=21, max_row=25), titles_from_data=True)
+bcML.set_categories(Reference(wsML, min_col=2, min_row=22, max_row=25))
+bcML.series[0].graphicalProperties.solidFill = GREEN
+bcML.width = 13; bcML.height = 7
+wsML.add_chart(bcML, "K31")
+
+# SHEET 5 — PIPELINE SUMMARY# SHEET 5 — PIPELINE SUMMARY
 # ────────────────────────────────────────────────────────────────────────────
 ws2 = wb.create_sheet("Pipeline Summary")
 ws2.sheet_view.showGridLines = False
@@ -172,13 +387,13 @@ set_col_widths(ws2, {"A":3,"B":22,"C":20,"D":18,"E":26,"F":22})
 
 section_title(ws2, 2, 2, "Medallion Pipeline Summary", TEAL)
 ws2.cell(2, 2).fill = fill(DARK)
-ws2.cell(3, 2).value = "Bronze → Silver → Gold  ·  BigQuery Medallion Architecture  ·  2024"
+ws2.cell(3, 2).value = "Bronze → Silver → Gold  ·  BigQuery Medallion Architecture  ·  H1 2024 campaign data"
 ws2.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
 ws2.cell(3, 2).fill = fill(DARK)
 
 header_row(ws2, 5, ["", "Layer", "Dataset", "Row Volume", "Write Mode", "Primary Tool"])
 layer_rows = [
-    ("", "BRONZE", "marketing_bronze.*", "523,480 rows",     "Append (partitioned by date)",  "BQ Data Transfer"),
+    ("", "BRONZE", "marketing_bronze.*", "523,480 modelled rows", "Append (partitioned by date)",  "BQ Data Transfer"),
     ("", "SILVER", "marketing_silver.*", "492,071 rows",     "Incremental merge (unique_key)", "dbt staging models"),
     ("", "GOLD",   "marketing_gold.*",   "fct + rpt tables", "Full table overwrite",           "dbt mart models"),
 ]
@@ -227,7 +442,7 @@ set_col_widths(ws3, {"A":3,"B":24,"C":14,"D":12,"E":10,"F":16,"G":14,"H":10,"I":
 
 section_title(ws3, 2, 2, "Cross-Channel Performance — Gold Fact Table", TEAL)
 ws3.cell(2, 2).fill = fill(DARK)
-ws3.cell(3, 2).value = "Source: marketing_gold.fct_cross_channel_performance  ·  Jan–Jun 2024  ·  Blended ROAS 3.8×"
+ws3.cell(3, 2).value = "Source: marketing_gold.fct_cross_channel_performance  ·  1 Jan-30 Jun 2024  ·  Blended ROAS 3.8×"
 ws3.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
 ws3.cell(3, 2).fill = fill(DARK)
 
@@ -294,7 +509,7 @@ set_col_widths(ws4, {"A":3,"B":26,"C":16,"D":14,"E":14,"F":14})
 
 section_title(ws4, 2, 2, "Data Quality Report — Apache Beam Validation", RED)
 ws4.cell(2, 2).fill = fill(DARK)
-ws4.cell(3, 2).value = "ValidateAndTagRow DoFn  ·  Cloud Dataflow  ·  6.0% quarantine rate  ·  2024"
+ws4.cell(3, 2).value = "ValidateAndTagRow DoFn  ·  Cloud Dataflow  ·  H1 2024 campaign data  ·  6.0% quarantine rate"
 ws4.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
 ws4.cell(3, 2).fill = fill(DARK)
 
@@ -354,7 +569,7 @@ set_col_widths(ws5, {"A":3,"B":22,"C":16,"D":14,"E":16,"F":16})
 
 section_title(ws5, 2, 2, "GA4 Event Summary — BigQuery Export", GREEN)
 ws5.cell(2, 2).fill = fill(DARK)
-ws5.cell(3, 2).value = "analytics_*.events_*  ·  Jan–Jun 2024  ·  South Africa  ·  Organic CVR 2.5%"
+ws5.cell(3, 2).value = "analytics_*.events_*  ·  1 Jan-30 Jun 2024  ·  South African ecommerce  ·  Organic CVR 2.5%"
 ws5.cell(3, 2).font = font(color=MUTED, size=9, italic=True)
 ws5.cell(3, 2).fill = fill(DARK)
 
@@ -401,7 +616,7 @@ for i, (m, s) in enumerate([("Jan",62000),("Feb",74000),("Mar",81000),("Apr",880
     ws5.cell(27+i, 2, m)
     ws5.cell(27+i, 3, s)
 lc = LineChart()
-lc.title = "Monthly Sessions — GA4 (Jan–Jun 2024)"
+lc.title = "Monthly Sessions — GA4 H1 2024 Campaign"
 lc.y_axis.title = "Sessions"
 lc.add_data(Reference(ws5, min_col=3, min_row=27, max_row=32))
 lc.set_categories(Reference(ws5, min_col=2, min_row=27, max_row=32))
@@ -474,7 +689,20 @@ ws6.add_chart(bc3, "E5")
 # SAVE
 # ────────────────────────────────────────────────────────────────────────────
 import os, pathlib
-out_path = pathlib.Path(__file__).parent / "GCP_Marketing_Analytics_Platform_v2.xlsx"
-wb.save(out_path)
+from datetime import datetime
+base_dir = pathlib.Path(__file__).parent
+out_path = base_dir / "GCP_Marketing_Analytics_Platform_v2.xlsx"
+try:
+    wb.save(out_path)
+except PermissionError:
+    out_path = base_dir / "GCP_Marketing_Analytics_Platform_v2_revitalized.xlsx"
+    try:
+        wb.save(out_path)
+        print("Original workbook was locked; saved refreshed copy instead.")
+    except PermissionError:
+        stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        out_path = base_dir / f"GCP_Marketing_Analytics_Platform_v2_revitalized_{stamp}.xlsx"
+        wb.save(out_path)
+        print("Original and refreshed workbooks were locked; saved timestamped copy instead.")
 print(f"Saved: {out_path}")
 print("Sheets:", [s.title for s in wb.worksheets])

@@ -1,0 +1,6 @@
+layer,file_name,grain,purpose
+bronze,data/bronze/transactional_raw/*.csv,"raw source exports with strings, duplicates, malformed dates, missing keys, and source-system quirks",Preserve raw evidence for the Cape & Cart product/order pipeline.
+silver,data/silver/transactional/*_clean.csv,"typed, deduplicated, validated rows",dbt/Beam-style cleaned transactional layer used by downstream analytics and ML.
+quarantine,data/silver/transactional/transactional_quarantine.csv,one rejected row per validation failure,Audit trail for bad product/order/customer/touchpoint records.
+gold,data/gold/gold_product_performance.csv,one row per product,Curated product performance fact table for top/worst product reporting.
+compatibility,data/transactional/*.csv,same as Silver curated outputs,"Keeps existing dashboard, ebook, Excel, ML, and Snowflake loader paths stable."

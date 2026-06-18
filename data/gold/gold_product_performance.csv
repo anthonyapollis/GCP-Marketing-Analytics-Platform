@@ -1,0 +1,31 @@
+product_id,product_name,category,units_sold,net_revenue_zar,gross_margin_pct,lead_campaign_channel,campaign_focus_flag
+SKU-BED-001,Cotton Bedding Bundle,Bedroom,1029,695060.95,0.38,CM360,true
+SKU-KIT-002,Ceramic Dinner Set,Kitchen,992,576441.47,0.34,CM360,true
+SKU-BATH-001,Bath Towel Bundle,Bathroom,1030,398838.15,0.37,Google Ads,true
+SKU-WORK-001,Desk Organiser,Workspace,1030,249483.57,0.43,DV360,true
+SKU-KIT-003,Digital Kitchen Scale,Kitchen,996,211319.71,0.39,Google Ads,true
+SKU-HOME-002,Loadshedding LED Lamp,Home Essentials,931,205738.59,0.41,Google Ads,true
+SKU-LIFE-005,Weekend Cooler Bag,Lifestyle,591,171999.53,0.34,Email,false
+SKU-OUT-001,Outdoor Beanbag,Outdoor,224,170539.12,0.25,DV360,true
+SKU-HOME-001,Bamboo Storage Set,Home Organisation,996,143536.55,0.46,Google Ads,true
+SKU-BED-002,Luxury Throw Blanket,Bedroom,230,123603.01,0.29,CM360,true
+SKU-WORK-002,Cable Management Box,Workspace,626,121596.09,0.41,Google Ads,false
+SKU-PET-001,Round Pet Bed,Pet,254,111696.04,0.28,DV360,true
+SKU-LIFE-002,Scented Candle Duo,Lifestyle,942,109136.47,0.49,Youtube,true
+SKU-HOME-004,Underbed Storage Bag,Home Organisation,564,103857.29,0.43,Google Ads,false
+SKU-BED-003,Pillow Protector Pair,Bedroom,605,93688.64,0.39,Email,false
+SKU-HOME-003,Foldable Laundry Basket,Home Organisation,592,91456.75,0.42,Organic Search,false
+SKU-DEC-004,Linen Cushion Cover,Decor,622,89780.68,0.36,Direct,false
+SKU-KIT-001,Airtight Pantry Labels,Kitchen,1004,86359.06,0.55,Google Ads,true
+SKU-DEC-001,Glass Terrarium,Decor,269,85745.15,0.31,DV360,true
+SKU-KIT-005,Silicone Utensil Set,Kitchen,625,84983.05,0.48,Organic Search,false
+SKU-LIFE-001,Reusable Shopper Totes,Lifestyle,976,74936.91,0.52,Youtube,true
+SKU-PET-002,Pet Feeding Mat,Pet,641,74317.95,0.40,Organic Search,false
+SKU-BATH-002,Soap Dispenser Set,Bathroom,575,72158.17,0.44,Direct,false
+SKU-DEC-002,Minimal Wall Clock,Decor,244,67943.95,0.32,CM360,true
+SKU-WELL-001,Yoga Mat,Wellness,256,64393.00,0.35,Youtube,true
+SKU-DEC-003,Decorative Vase,Decor,246,58948.68,0.30,CM360,true
+SKU-KIT-006,Reusable Food Wraps,Kitchen,581,55861.38,0.50,Youtube,false
+SKU-LIFE-003,Kids Tee Bundle,Lifestyle,290,53345.99,0.36,Youtube,true
+SKU-LIFE-004,Insulated Travel Mug,Lifestyle,259,42332.08,0.38,DV360,true
+SKU-KIT-004,Copper Water Bottle,Kitchen,241,41710.81,0.33,DV360,true

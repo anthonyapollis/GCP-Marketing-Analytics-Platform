@@ -1,0 +1,21 @@
+rank_group,rank,product_id,product_name,category,lead_channel,attributed_spend_zar,attributed_revenue_zar,roas,attributed_conversions,recommended_action
+top_10,1,SKU-HOME-001,Bamboo Storage Set,Home Organisation,Google Ads,28400,144800,5.1,312,scale_budget
+top_10,2,SKU-HOME-002,Loadshedding LED Lamp,Home Essentials,Google Ads,22600,106200,4.7,241,scale_budget
+top_10,3,SKU-BED-001,Cotton Bedding Bundle,Bedroom,CM360,31800,139900,4.4,198,scale_budget
+top_10,4,SKU-KIT-001,Airtight Pantry Labels,Kitchen,Google Ads,12800,55000,4.3,356,scale_budget
+top_10,5,SKU-KIT-002,Ceramic Dinner Set,Kitchen,CM360,24600,101900,4.1,144,scale_budget
+top_10,6,SKU-LIFE-001,Reusable Shopper Totes,Lifestyle,YouTube,9600,38400,4.0,420,scale_budget
+top_10,7,SKU-BATH-001,Bath Towel Bundle,Bathroom,Google Ads,21400,81300,3.8,187,scale_budget
+top_10,8,SKU-WORK-001,Desk Organiser,Workspace,DV360,15800,58400,3.7,166,scale_budget
+top_10,9,SKU-KIT-003,Digital Kitchen Scale,Kitchen,Google Ads,13200,47500,3.6,132,scale_budget
+top_10,10,SKU-LIFE-002,Scented Candle Duo,Lifestyle,YouTube,8800,29000,3.3,254,scale_budget
+worst_10,1,SKU-OUT-001,Outdoor Beanbag,Outdoor,DV360,18200,9100,0.5,12,pause_fix_or_retest
+worst_10,2,SKU-DEC-001,Glass Terrarium,Decor,DV360,9600,6700,0.7,18,pause_fix_or_retest
+worst_10,3,SKU-BED-002,Luxury Throw Blanket,Bedroom,CM360,15800,14200,0.9,21,pause_fix_or_retest
+worst_10,4,SKU-LIFE-003,Kids Tee Bundle,Lifestyle,YouTube,7400,7200,1.0,31,pause_fix_or_retest
+worst_10,5,SKU-KIT-004,Copper Water Bottle,Kitchen,DV360,11300,12500,1.1,42,pause_fix_or_retest
+worst_10,6,SKU-DEC-002,Minimal Wall Clock,Decor,CM360,8900,10600,1.2,19,pause_fix_or_retest
+worst_10,7,SKU-PET-001,Round Pet Bed,Pet,DV360,13400,17400,1.3,27,pause_fix_or_retest
+worst_10,8,SKU-WELL-001,Yoga Mat,Wellness,YouTube,7800,10900,1.4,36,pause_fix_or_retest
+worst_10,9,SKU-LIFE-004,Insulated Travel Mug,Lifestyle,DV360,10100,15100,1.5,48,pause_fix_or_retest
+worst_10,10,SKU-DEC-003,Decorative Vase,Decor,CM360,6200,9900,1.6,22,pause_fix_or_retest

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>GCP Marketing Analytics Platform — Hiring Manager Dashboard</title>
+<title>Cape &amp; Cart H1 Growth Campaign — Budget Truth Room</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root{
@@ -113,7 +113,7 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
   background:rgba(239,68,68,.13);color:var(--red)}
 
 /* CHARTS */
-.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.5rem;margin-bottom:2rem}
+.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:1.5rem;margin-bottom:2rem}
 .cc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
 .cc-title{font-size:.95rem;font-weight:600;margin-bottom:.3rem;color:var(--bright)}
 .cc-sub{font-size:.75rem;color:var(--dim);margin-bottom:1.2rem;line-height:1.5}
@@ -152,6 +152,65 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
 .footer strong{color:var(--text)}
 .footer a{color:var(--teal)}
 
+/* STORY LAYER */
+.story-kicker{font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.75rem}
+.hero-thesis{font-size:clamp(1rem,2vw,1.18rem);color:var(--muted);max-width:760px;line-height:1.75;margin:0 auto 1rem}
+.hero-thesis strong{color:var(--text)}
+.truth-note{max-width:760px;margin:0 auto 2.25rem;color:var(--muted);font-size:.9rem;line-height:1.65}
+.decision-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:2rem auto 0;max-width:1100px}
+.decision-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.15rem 1.25rem;box-shadow:0 10px 28px rgba(15,23,42,.06)}
+.decision-card .dc-label{font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:.45rem}
+.decision-card .dc-title{font-size:1rem;font-weight:800;color:var(--text);line-height:1.35;margin-bottom:.35rem}
+.decision-card p{font-size:.84rem;color:var(--muted);line-height:1.6}
+.decision-card strong{color:var(--text)}
+.narrative-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:1.25rem;align-items:stretch;margin-bottom:2rem}
+.brief-panel{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.35rem 1.5rem}
+.brief-panel h3{font-size:1rem;margin-bottom:.7rem}
+.brief-panel p{font-size:.88rem;color:var(--muted);line-height:1.68;margin-bottom:.6rem}
+.brief-panel p:last-child{margin-bottom:0}
+.brief-panel strong{color:var(--text)}
+@media(max-width:820px){
+  .decision-strip,.narrative-grid{grid-template-columns:1fr}
+}
+
+.story-panel{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:1.25rem;align-items:stretch}
+.story-copy,.story-facts{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.35rem 1.5rem;box-shadow:0 10px 28px rgba(15,23,42,.05)}
+.story-copy p{color:var(--muted);font-size:.9rem;line-height:1.72;margin-bottom:.75rem}
+.story-copy p:last-child{margin-bottom:0}
+.story-copy strong{color:var(--text)}
+.story-facts{display:grid;gap:.85rem}
+.fact-line{border-left:3px solid var(--teal);padding-left:.85rem}
+.fact-line:nth-child(2){border-left-color:var(--amber)}
+.fact-line:nth-child(3){border-left-color:var(--purple)}
+.fact-line:nth-child(4){border-left-color:var(--green)}
+.fact-k{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.fact-v{font-size:.92rem;color:var(--text);font-weight:700;line-height:1.35;margin-top:.15rem}
+@media(max-width:820px){.story-panel{grid-template-columns:1fr}}
+
+
+.scope-note{max-width:1100px;margin:1.25rem auto 0;background:rgba(255,255,255,.9);border:1px solid var(--border2);border-radius:8px;padding:1rem 1.15rem;text-align:left}
+.scope-note .scope-title{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:.35rem}
+.scope-note p{font-size:.84rem;color:var(--muted);line-height:1.6;margin:0}
+.scope-note strong{color:var(--text)}
+
+
+.product-note{background:rgba(8,145,178,.07);border:1px solid rgba(8,145,178,.2);border-radius:8px;padding:1rem 1.15rem;margin-bottom:1.5rem;color:var(--muted);font-size:.86rem;line-height:1.6}
+.product-note strong{color:var(--text)}
+.prod-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.prod-table th{text-align:left;padding:.65rem .75rem;color:var(--dim);font-size:.63rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border2)}
+.prod-table td{padding:.65rem .75rem;border-bottom:1px solid rgba(203,213,225,.75);vertical-align:middle;color:var(--muted)}
+.prod-table td strong{color:var(--text)}
+.prod-cat{font-size:.68rem;color:var(--dim)}
+.rank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr));gap:1.5rem;margin-bottom:1.5rem}
+
+
+.ml-kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:1.5rem 0}
+.ml-kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem}
+.ml-kpi .mk{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:.35rem}
+.ml-kpi .mv{font-size:1.65rem;font-weight:900;line-height:1;color:var(--teal)}
+.ml-kpi .mn{font-size:.78rem;color:var(--muted);line-height:1.45;margin-top:.4rem}
+
+
 /* FADE IN */
 .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:none}
@@ -163,35 +222,85 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
+  <div class="story-kicker">Budget truth room</div>
   <div class="badge-row">
     <span class="badge bd-teal">GA4 · GTM · Consent Mode</span>
-    <span class="badge bd-green">BigQuery · dbt · Medallion</span>
+    <span class="badge bd-green">GCP Primary · BigQuery · dbt</span>
     <span class="badge bd-purple">Apache Beam · Cloud Dataflow</span>
-    <span class="badge bd-amber">Airflow DAG · 5 Ad Sources</span>
+    <span class="badge bd-amber">Cape &amp; Cart · H1 2024</span>
   </div>
-  <h1>GCP Marketing Analytics Platform</h1>
-  <p class="subtitle">5 paid advertising sources unified into a single BigQuery Gold fact table — revealing where R1.48M in ad spend is working, where it isn't, and why.</p>
+  <h1>Cape &amp; Cart H1 Growth Campaign Analytics</h1>
+  <p class="hero-thesis"><strong>Cape &amp; Cart, an anonymised portfolio scenario for a South African online retailer, spent R1.483M across Search, YouTube, CM360, and DV360 from 1 Jan to 30 Jun 2024.</strong> The campaign looked profitable, but fragmented exports, unfair attribution, and dirty source data made the next budget move risky.</p>
+  <p class="truth-note">Portfolio scenario: Cape &amp; Cart's anonymised H1 growth campaign. The build turns six months of paid media, GA4, and transfer-service data into one defensible budget conversation for a retail team trying to scale without losing trust in its numbers.</p>
   <div class="hero-stats">
-    <div class="hs"><div class="num" style="color:var(--teal)">12.1M</div><div class="lbl">Total Impressions</div></div>
-    <div class="hs"><div class="num" style="color:var(--blue)">185.5K</div><div class="lbl">Paid Clicks</div></div>
-    <div class="hs"><div class="num" style="color:var(--green)">3.8×</div><div class="lbl">Blended ROAS</div></div>
-    <div class="hs"><div class="num" style="color:var(--purple)">1,886</div><div class="lbl">Paid Conversions</div></div>
-    <div class="hs"><div class="num" style="color:var(--amber)">94.0%</div><div class="lbl">DQ Pass Rate</div></div>
-    <div class="hs"><div class="num" style="color:var(--pink)">492K</div><div class="lbl">Silver Rows</div></div>
+    <div class="hs"><div class="num" style="color:var(--teal)">8,775</div><div class="lbl">Repo Raw Rows</div></div>
+    <div class="hs"><div class="num" style="color:var(--blue)">3</div><div class="lbl">Checked-In CSVs</div></div>
+    <div class="hs"><div class="num" style="color:var(--green)">3.8×</div><div class="lbl">Scenario ROAS</div></div>
+    <div class="hs"><div class="num" style="color:var(--purple)">1,886</div><div class="lbl">Scenario Conversions</div></div>
+    <div class="hs"><div class="num" style="color:var(--amber)">523K</div><div class="lbl">Modelled Bronze Rows</div></div>
+    <div class="hs"><div class="num" style="color:var(--pink)">6</div><div class="lbl">Months Modelled</div></div>
+  </div>
+  <div class="scope-note">
+    <div class="scope-title">Data scope</div>
+    <p><strong>Actual checked-in raw data:</strong> 8,775 rows across GA4, Google Ads, and YouTube CSVs. <strong>Presentation metrics:</strong> the dashboard and workbook model a larger H1 campaign scenario of 523,480 Bronze rows across five marketing sources, used to demonstrate production-scale architecture and decisioning.</p>
   </div>
   <div class="chevron">↓</div>
 </div>
 
+<!-- COMPANY STORY -->
+<section class="fade-in">
+  <div class="sec-label">Company Story</div>
+  <h2>Who Cape &amp; Cart is, and why this campaign mattered</h2>
+  <p class="sec-sub">Cape &amp; Cart is an anonymised portfolio scenario for a South African online retailer built around practical home, lifestyle, and everyday essentials. The story gives the analytics work a real business context: a growing brand, a stretched marketing budget, and a team that needed proof before moving spend.</p>
+  <div class="story-panel">
+    <div class="story-copy">
+      <p><strong>Cape &amp; Cart started as a Cape Town marketplace for locally sourced home and lifestyle products.</strong> By 2024 it had grown into a national ecommerce retailer, shipping across South Africa and competing with bigger players on convenience, trust, and curated ranges rather than endless inventory.</p>
+      <p>The H1 growth campaign was meant to do two things at once: defend profitable Search demand while using YouTube and display to introduce the brand to new shoppers before peak retail season. The problem was not a lack of marketing activity. The problem was that every platform told a different version of the truth.</p>
+      <p>This analytics platform was built for the moment Cape &amp; Cart's leadership asked a simple question with expensive consequences: <strong>which channel deserves the next rand?</strong></p>
+    </div>
+    <div class="story-facts">
+      <div class="fact-line"><div class="fact-k">Business type</div><div class="fact-v">Anonymised South African ecommerce retailer</div></div>
+      <div class="fact-line"><div class="fact-k">Commercial pressure</div><div class="fact-v">Grow nationally without wasting paid media budget</div></div>
+      <div class="fact-line"><div class="fact-k">Campaign period</div><div class="fact-v">H1 2024, from 1 Jan to 30 Jun</div></div>
+      <div class="fact-line"><div class="fact-k">Analytics question</div><div class="fact-v">Where should Cape &amp; Cart move budget next?</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXECUTIVE DECISION BRIEF -->
+<section class="fade-in">
+  <div class="sec-label">Executive Decision Brief</div>
+  <h2>What I would do Monday morning for the H1 campaign</h2>
+  <p class="sec-sub">The dashboard has one job: turn six months of messy ecommerce marketing data into budget decisions a team can defend. These are the actions the evidence supports now.</p>
+  <div class="decision-strip">
+    <div class="decision-card">
+      <div class="dc-label">Move 1</div>
+      <div class="dc-title">Protect Search, but stop letting it take all the credit</div>
+      <p><strong>4.2x ROAS</strong> deserves scale, but last-click attribution is probably absorbing demand YouTube created earlier in the journey.</p>
+    </div>
+    <div class="decision-card">
+      <div class="dc-label">Move 2</div>
+      <div class="dc-title">Treat YouTube as an attribution investigation</div>
+      <p><strong>2.9x ROAS</strong> is below target on paper. Add view-through conversions before cutting awareness spend.</p>
+    </div>
+    <div class="decision-card">
+      <div class="dc-label">Move 3</div>
+      <div class="dc-title">Turn checkout abandonment into a remarketing audience</div>
+      <p><strong>16.8K add-to-cart users</strong> did not purchase. That is not a vanity metric; it is the warmest recovery pool in the data.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CHANNEL PERFORMANCE -->
 <section class="fade-in">
   <div class="sec-label">Channel Analysis</div>
-  <h2>Where is the R1.48M going — and is it working?</h2>
-  <p class="sec-sub">Blended ROAS of 3.8× beats the 3.0× target. But the breakdown reveals stark differences in efficiency. Google Ads Search dominates with 4.2× while YouTube trails at 2.9× — and they serve fundamentally different purposes in the funnel.</p>
+  <h2>Where did the H1 campaign spend R1.483M — and what is attribution hiding?</h2>
+  <p class="sec-sub">Across 1 Jan-30 Jun 2024, blended ROAS of 3.8× beats the 3.0× target. But the real value is not the headline number. The split exposes two jobs: Search captures ecommerce demand at 4.2×, while YouTube creates demand that last-click reporting may be handing to Search later.</p>
 
   <div class="insight ok">
-    <div class="insight-icon">✅</div>
+    <div class="insight-icon">01</div>
     <div class="insight-body">
-      <div class="ins-title">3 of 4 channels are above the 3.0× ROAS target</div>
+      <div class="ins-title">The decision is not simply scale winners and cut losers</div>
       <p>YouTube at 2.9× is marginally below target — but YouTube's role is <strong>upper-funnel brand awareness</strong>, not last-click conversion. Comparing it to Search on ROAS alone misrepresents its value. It contributes 1.89M impressions (15.6% of total) at a low CPM — view-through attribution would show a stronger contribution.</p>
     </div>
   </div>
@@ -264,11 +373,79 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
   </div>
 </section>
 
+<!-- PRODUCT PERFORMANCE -->
+<section class="fade-in" style="padding-top:0">
+  <div class="sec-label">Product Performance</div>
+  <h2>Which products did the H1 campaign actually move?</h2>
+  <p class="sec-sub">The product layer now follows the same medallion story as the marketing feeds: dirty ecommerce source exports land in Bronze, 964 product/order/customer/touchpoint rows are quarantined, and the cleaned Silver/Gold layer feeds product attribution.</p>
+  <div class="product-note"><strong>How to read this:</strong> top products are ranked by attributed revenue and ROAS; worst products are ranked by low ROAS and wasted spend. This should guide creative, audience, and landing-page decisions rather than replace source-of-truth merchandising data.</div>
+
+  <div class="chart-grid">
+    <div class="cc">
+      <div class="cc-title">Top 10 Products by Attributed Revenue</div>
+      <div class="cc-sub">Home organisation and kitchen products carry the strongest commercial signal.</div>
+      <div class="chart-wrap"><canvas id="topProductChart"></canvas></div>
+    </div>
+    <div class="cc">
+      <div class="cc-title">Worst 10 Products by ROAS</div>
+      <div class="cc-sub">Decor and bulky outdoor items absorb spend without enough purchase response.</div>
+      <div class="chart-wrap"><canvas id="worstProductChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="rank-grid">
+    <div class="cc">
+      <div class="cc-title" style="margin-bottom:1rem">Top 10 Campaign Products</div>
+      <table class="prod-table">
+        <thead><tr><th>Product</th><th>Lead channel</th><th>Spend</th><th>Revenue</th><th>ROAS</th><th>Conv.</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Bamboo Storage Set</strong><br/><span class="prod-cat">Home Organisation</span></td><td>Google Ads</td><td>R28,400</td><td>R144,800</td><td><span class="sb sb-g">5.1x</span></td><td>312</td></tr>
+        <tr><td><strong>Loadshedding LED Lamp</strong><br/><span class="prod-cat">Home Essentials</span></td><td>Google Ads</td><td>R22,600</td><td>R106,200</td><td><span class="sb sb-g">4.7x</span></td><td>241</td></tr>
+        <tr><td><strong>Cotton Bedding Bundle</strong><br/><span class="prod-cat">Bedroom</span></td><td>CM360</td><td>R31,800</td><td>R139,900</td><td><span class="sb sb-g">4.4x</span></td><td>198</td></tr>
+        <tr><td><strong>Airtight Pantry Labels</strong><br/><span class="prod-cat">Kitchen</span></td><td>Google Ads</td><td>R12,800</td><td>R55,000</td><td><span class="sb sb-g">4.3x</span></td><td>356</td></tr>
+        <tr><td><strong>Ceramic Dinner Set</strong><br/><span class="prod-cat">Kitchen</span></td><td>CM360</td><td>R24,600</td><td>R101,900</td><td><span class="sb sb-g">4.1x</span></td><td>144</td></tr>
+        <tr><td><strong>Reusable Shopper Totes</strong><br/><span class="prod-cat">Lifestyle</span></td><td>YouTube</td><td>R9,600</td><td>R38,400</td><td><span class="sb sb-g">4.0x</span></td><td>420</td></tr>
+        <tr><td><strong>Bath Towel Bundle</strong><br/><span class="prod-cat">Bathroom</span></td><td>Google Ads</td><td>R21,400</td><td>R81,300</td><td><span class="sb sb-g">3.8x</span></td><td>187</td></tr>
+        <tr><td><strong>Desk Organiser</strong><br/><span class="prod-cat">Workspace</span></td><td>DV360</td><td>R15,800</td><td>R58,400</td><td><span class="sb sb-g">3.7x</span></td><td>166</td></tr>
+        <tr><td><strong>Digital Kitchen Scale</strong><br/><span class="prod-cat">Kitchen</span></td><td>Google Ads</td><td>R13,200</td><td>R47,500</td><td><span class="sb sb-g">3.6x</span></td><td>132</td></tr>
+        <tr><td><strong>Scented Candle Duo</strong><br/><span class="prod-cat">Lifestyle</span></td><td>YouTube</td><td>R8,800</td><td>R29,000</td><td><span class="sb sb-g">3.3x</span></td><td>254</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cc">
+      <div class="cc-title" style="margin-bottom:1rem">Worst 10 Campaign Products</div>
+      <table class="prod-table">
+        <thead><tr><th>Product</th><th>Lead channel</th><th>Spend</th><th>Revenue</th><th>ROAS</th><th>Conv.</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Outdoor Beanbag</strong><br/><span class="prod-cat">Outdoor</span></td><td>DV360</td><td>R18,200</td><td>R9,100</td><td><span class="sb sb-r">0.5x</span></td><td>12</td></tr>
+        <tr><td><strong>Glass Terrarium</strong><br/><span class="prod-cat">Decor</span></td><td>DV360</td><td>R9,600</td><td>R6,700</td><td><span class="sb sb-r">0.7x</span></td><td>18</td></tr>
+        <tr><td><strong>Luxury Throw Blanket</strong><br/><span class="prod-cat">Bedroom</span></td><td>CM360</td><td>R15,800</td><td>R14,200</td><td><span class="sb sb-r">0.9x</span></td><td>21</td></tr>
+        <tr><td><strong>Kids Tee Bundle</strong><br/><span class="prod-cat">Lifestyle</span></td><td>YouTube</td><td>R7,400</td><td>R7,200</td><td><span class="sb sb-r">1.0x</span></td><td>31</td></tr>
+        <tr><td><strong>Copper Water Bottle</strong><br/><span class="prod-cat">Kitchen</span></td><td>DV360</td><td>R11,300</td><td>R12,500</td><td><span class="sb sb-r">1.1x</span></td><td>42</td></tr>
+        <tr><td><strong>Minimal Wall Clock</strong><br/><span class="prod-cat">Decor</span></td><td>CM360</td><td>R8,900</td><td>R10,600</td><td><span class="sb sb-r">1.2x</span></td><td>19</td></tr>
+        <tr><td><strong>Round Pet Bed</strong><br/><span class="prod-cat">Pet</span></td><td>DV360</td><td>R13,400</td><td>R17,400</td><td><span class="sb sb-r">1.3x</span></td><td>27</td></tr>
+        <tr><td><strong>Yoga Mat</strong><br/><span class="prod-cat">Wellness</span></td><td>YouTube</td><td>R7,800</td><td>R10,900</td><td><span class="sb sb-r">1.4x</span></td><td>36</td></tr>
+        <tr><td><strong>Insulated Travel Mug</strong><br/><span class="prod-cat">Lifestyle</span></td><td>DV360</td><td>R10,100</td><td>R15,100</td><td><span class="sb sb-r">1.5x</span></td><td>48</td></tr>
+        <tr><td><strong>Decorative Vase</strong><br/><span class="prod-cat">Decor</span></td><td>CM360</td><td>R6,200</td><td>R9,900</td><td><span class="sb sb-r">1.6x</span></td><td>22</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="insight ok">
+    <div class="insight-icon">01</div>
+    <div class="insight-body">
+      <div class="ins-title">Product action: scale bundles, pause weak decor, retest bulky items</div>
+      <p>The campaign should push Bamboo Storage Set, LED Lamp, Cotton Bedding Bundle, Pantry Labels, and Ceramic Dinner Set harder in Search and CM360. DV360 should stop prospecting against Outdoor Beanbag, Pet Bed, and low-response decor until landing pages, shipping cost objections, and creative are fixed.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CHARTS -->
 <section class="fade-in" style="padding-top:0">
   <div class="sec-label">Visual Analysis</div>
   <h2>Channel performance at a glance</h2>
-  <div class="sec-sub">ROAS, spend distribution, and monthly impression trends — all data sourced from the Gold fact table.</div>
+  <div class="sec-sub">ROAS, spend distribution, conversion efficiency, funnel loss, attribution upside, and data-quality risk — all sourced from the Gold fact table or validation outputs.</div>
 
   <div class="chart-grid">
     <div class="cc">
@@ -284,7 +461,7 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
   </div>
   <div class="chart-grid">
     <div class="cc">
-      <div class="cc-title">Monthly Impressions Trend — Jan to Jun 2024</div>
+      <div class="cc-title">Monthly Impressions Trend — H1 2024 Campaign</div>
       <div class="cc-sub">Search and DV360 growing. YouTube flat in Q2 — consider seasonal creative refresh.</div>
       <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
     </div>
@@ -294,20 +471,91 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
       <div class="chart-wrap"><canvas id="impChart"></canvas></div>
     </div>
   </div>
+  <div class="chart-grid">
+    <div class="cc">
+      <div class="cc-title">Conversion Rate by Paid Channel</div>
+      <div class="cc-sub">CM360 converts clicks efficiently; YouTube needs view-through context before judgement.</div>
+      <div class="chart-wrap"><canvas id="cvrChart"></canvas></div>
+    </div>
+    <div class="cc">
+      <div class="cc-title">GA4 Funnel Volume — Where Cape &amp; Cart Loses Shoppers</div>
+      <div class="cc-sub">The commercial gap is between checkout start and purchase: 16.8K high-intent shoppers did not complete.</div>
+      <div class="chart-wrap"><canvas id="funnelChart"></canvas></div>
+    </div>
+  </div>
+  <div class="chart-grid">
+    <div class="cc">
+      <div class="cc-title">Quarantined Rows by Source</div>
+      <div class="cc-sub">YouTube has the largest reject count, which directly weakens attribution confidence.</div>
+      <div class="chart-wrap"><canvas id="dqFailChart"></canvas></div>
+    </div>
+    <div class="cc">
+      <div class="cc-title">Attribution Scenario — Current vs View-Through ROAS</div>
+      <div class="cc-sub">Adding YouTube view-through conversions could shift the budget conversation without changing spend.</div>
+      <div class="chart-wrap"><canvas id="scenarioChart"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ML MODELS -->
+<section class="fade-in" style="padding-top:0">
+  <div class="sec-label">ML Activation Layer</div>
+  <h2>What did the models prove, and where did they fail?</h2>
+  <p class="sec-sub">The primary case study remains GCP: BigQuery, Dataflow, dbt, Airflow, and GA4 exports. Snowflake is included as a portability and ML validation extension: the same Silver/Gold logic was replicated there to test whether the business conclusions hold outside GCP.</p>
+  <div class="product-note"><strong>How to read this:</strong> AUC, Accuracy, Precision, Recall and F1 are higher-is-better. MAE and RMSE are lower-is-better because they measure error. R² is higher-is-better because it measures how much variance the model explains. Customer models were evaluated using Jan-May features to predict June so the results do not leak future information.</div>
+  <div class="ml-kpi-grid">
+    <div class="ml-kpi"><div class="mk">Best ROAS Model</div><div class="mv">Trend</div><div class="mn">Trend Projection wins with RMSE 0.1238 and R² 0.9429.</div></div>
+    <div class="ml-kpi"><div class="mk">Forecast Error</div><div class="mv">0.098</div><div class="mn">MAE: average ROAS miss is under 0.10 points.</div></div>
+    <div class="ml-kpi"><div class="mk">Propensity AUC</div><div class="mv">0.457</div><div class="mn">Weak after leakage removal; transactional fields alone are not enough.</div></div>
+    <div class="ml-kpi"><div class="mk">Platform Story</div><div class="mv">GCP + SF</div><div class="mn">GCP is primary; Snowflake validates portability and ML outputs.</div></div>
+  </div>
+  <div class="chart-grid">
+    <div class="cc">
+      <div class="cc-title">Model Leaderboard — Customer Classification</div>
+      <div class="cc-sub">Customer models are honest but weak: they need GA4 event features such as product views, add-to-cart, sessions, email engagement, and discount behaviour.</div>
+      <div class="chart-wrap"><canvas id="mlClassCompareChart"></canvas></div>
+    </div>
+    <div class="cc">
+      <div class="cc-title">ROAS Forecast Algorithms — Error Comparison</div>
+      <div class="cc-sub">Trend Projection has the lowest RMSE and strongest R², so it is the best candidate for budget planning.</div>
+      <div class="chart-wrap"><canvas id="mlRoasAlgoChart"></canvas></div>
+    </div>
+  </div>
+  <div class="chart-grid">
+    <div class="cc">
+      <div class="cc-title">ML Workbench Results — Snowflake Validation Layer</div>
+      <div class="cc-sub">These results validate the GCP Gold model in a second warehouse. Exact metrics can differ by platform, but the business read should stay consistent when features, labels, and windows match.</div>
+      <table class="prod-table">
+        <thead><tr><th>Use Case</th><th>Best Algorithm</th><th>Metric Read</th><th>Decision</th></tr></thead>
+        <tbody>
+        <tr><td><strong>ROAS Forecast</strong></td><td>Trend Projection</td><td>MAE 0.0981 · RMSE 0.1238 · R² 0.9429</td><td>Use for July channel budget guardrails.</td></tr>
+        <tr><td><strong>Purchase Propensity</strong></td><td>Logistic Scorecard</td><td>AUC 0.4565 · F1 0.0364</td><td>Do not scale from this yet; add behaviour features.</td></tr>
+        <tr><td><strong>Churn Risk</strong></td><td>Low-Value Lapse Rule</td><td>AUC 0.5038 · F1 0.4262</td><td>Use cautiously for suppression/win-back tests only.</td></tr>
+        <tr><td><strong>Next Best Product</strong></td><td>Rule/co-occurrence queue</td><td>3,500 recommendations</td><td>Use for creative/product matching tests.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cc">
+      <div class="cc-title">July ROAS Forecast by Channel</div>
+      <div class="cc-sub">Trend Projection recommends scaling Search, holding CM360/DV360, and fixing YouTube before adding budget.</div>
+      <div class="chart-wrap"><canvas id="mlRoasForecastChart"></canvas></div>
+    </div>
+  </div>
+  <div class="product-note"><strong>Actionable next step:</strong> keep GCP as the source-of-truth architecture, then rebuild the shared feature store with GA4 user-level behaviour: sessions, product views, add-to-cart count, checkout starts, last product category viewed, discount sensitivity, email clicks, and days since last visit. Snowflake can keep serving as the validation workbench.</div>
 </section>
 
 <!-- PIPELINE & DQ -->
 <section class="fade-in" style="padding-top:0">
   <div class="sec-label">Pipeline Reliability</div>
-  <h2>Data you can trust — built on a medallion pipeline</h2>
-  <p class="sec-sub">The numbers above are only reliable because bad data was caught before it reached Gold. Apache Beam quarantined 6.0% of Bronze rows — not deleted them. Every quarantined row is auditable.</p>
+  <h2>The part nobody sees: stopping bad campaign data before it becomes strategy</h2>
+  <p class="sec-sub">The numbers above are reliable because the pipeline behaves like a skeptical analyst. Bronze preserves raw evidence, including dirty ecommerce product and order exports; validation refuses suspicious rows; dbt/Silver normalises the metrics; and Gold becomes the only place ROAS and product performance are allowed to exist.</p>
 
   <div class="pipeline-grid">
     <div class="pl-card pl-br">
       <div class="pl-icon">📥</div>
       <div class="pl-name" style="color:var(--amber)">BRONZE</div>
-      <div class="pl-desc">Raw ingestion from 5 sources via BQ Data Transfer. All columns STRING — zero rows rejected. Mixed dates, currency variants, and missing fields land exactly as received.</div>
-      <div class="pl-meta">523,480 rows · marketing_bronze.* · daily append</div>
+      <div class="pl-desc">Scenario-scale ingestion from 5 sources via BQ Data Transfer. All columns STRING — zero rows rejected. Mixed dates, currency variants, and missing fields land exactly as received.</div>
+      <div class="pl-meta">523,480 modelled rows · marketing_bronze.* · daily append</div>
     </div>
     <div class="pl-card pl-si">
       <div class="pl-icon">🔍</div>
@@ -338,7 +586,7 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
   </div>
 
   <div class="cc" style="margin-top:1.5rem">
-    <div class="cc-title" style="margin-bottom:1.25rem">Data Quality by Source</div>
+    <div class="cc-title" style="margin-bottom:1.25rem">Where the Pipeline Refused to Lie</div>
     <table class="dq-table">
       <thead>
         <tr><th>Source</th><th>Bronze Rows</th><th>Passed</th><th>Quarantined</th><th>Pass Rate</th><th>Primary Issue</th></tr>
@@ -366,11 +614,11 @@ h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;margin-bottom:.4rem}
 <!-- GA4 FUNNEL -->
 <section class="fade-in" style="padding-top:0">
   <div class="sec-label">Organic Performance</div>
-  <h2>GA4 ecommerce funnel — 480K sessions, 2.5% purchase rate</h2>
+  <h2>GA4 ecommerce funnel — H1 campaign drove 480K sessions and a 2.5% purchase rate</h2>
   <p class="sec-sub">Organic traffic benchmarks paid channel performance. When organic converts at 2.5% and paid channels average 1.02%, the question is: what does organic do differently?</p>
 
   <div class="metric-grid">
-    <div class="mc"><div class="mc-top"><div><div class="mc-lbl">Sessions</div><div class="mc-val" style="color:var(--teal)">480K</div></div><div class="mc-icon">👤</div></div><div class="mc-note">GA4 · Jan–Jun 2024 · SA market</div></div>
+    <div class="mc"><div class="mc-top"><div><div class="mc-lbl">Sessions</div><div class="mc-val" style="color:var(--teal)">480K</div></div><div class="mc-icon">👤</div></div><div class="mc-note">GA4 · 1 Jan-30 Jun 2024 · SA ecommerce</div></div>
     <div class="mc"><div class="mc-top"><div><div class="mc-lbl">Add to Cart</div><div class="mc-val" style="color:var(--blue)">61,200</div></div><div class="mc-icon">🛒</div></div><div class="mc-note">12.8% of sessions — strong intent signal</div><span class="tag-up">12.8%</span></div>
     <div class="mc"><div class="mc-top"><div><div class="mc-lbl">Purchases</div><div class="mc-val" style="color:var(--green)">12,100</div></div><div class="mc-icon">✅</div></div><div class="mc-note">2.5% session-to-purchase rate</div><span class="tag-up">2.5% CVR</span></div>
     <div class="mc"><div class="mc-top"><div><div class="mc-lbl">Checkout Drop-off</div><div class="mc-val" style="color:var(--amber)">58%</div></div><div class="mc-icon">⚠️</div></div><div class="mc-note">28,900 started · 12,100 completed</div><span class="tag-warn">Optimise</span></div>
@@ -459,6 +707,111 @@ new Chart(document.getElementById('impChart'),{
     backgroundColor:clrs,borderWidth:2,borderColor:'#FFFFFF'}]},
   options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
     plugins:{legend:{...legend,position:'bottom'}}}
+})
+
+// Conversion rate by channel
+new Chart(document.getElementById('cvrChart'),{
+  type:'bar',
+  data:{labels:ch,datasets:[{label:'Click-to-conversion rate %',data:[1.20,1.44,0.80,0.57],
+    backgroundColor:clrs,borderRadius:5}]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{y:{grid,ticks:{color:'#475569'},title:{display:true,text:'Conversion rate %',color:'#475569'}},
+            x:{grid:{display:false},ticks:{color:'#475569'}}}}
+})
+
+// Ecommerce funnel volume
+new Chart(document.getElementById('funnelChart'),{
+  type:'bar',
+  data:{labels:['Sessions','Add to cart','Checkout start','Purchase'],
+    datasets:[{label:'Users / events',data:[480000,61200,28900,12100],
+      backgroundColor:['#0891B2','#2563EB','#D97706','#16A34A'],borderRadius:5}]},
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{grid,ticks:{color:'#475569'}},y:{grid:{display:false},ticks:{color:'#475569'}}}}
+})
+
+// Data quality rejects by source
+new Chart(document.getElementById('dqFailChart'),{
+  type:'bar',
+  data:{labels:['GA4','Google Ads','CM360','DV360','YouTube'],
+    datasets:[{label:'Quarantined rows',data:[6759,6316,3360,6802,8172],
+      backgroundColor:['#0891B2','#2563EB','#16A34A','#8B5CF6','#EF4444'],borderRadius:5}]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{y:{grid,ticks:{color:'#475569'}},x:{grid:{display:false},ticks:{color:'#475569'}}}}
+})
+
+// Attribution scenario
+new Chart(document.getElementById('scenarioChart'),{
+  type:'bar',
+  data:{labels:ch,datasets:[
+    {label:'Current last-click ROAS',data:[4.2,3.8,3.4,2.9],backgroundColor:clrs20,borderColor:clrs,borderWidth:1.5,borderRadius:4},
+    {label:'Scenario with YouTube view-through',data:[4.2,3.8,3.4,3.6],backgroundColor:clrs,borderRadius:4}
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend},
+    scales:{y:{min:0,max:5,grid,ticks:{color:'#475569'},title:{display:true,text:'ROAS',color:'#475569'}},
+            x:{grid:{display:false},ticks:{color:'#475569'}}}}
+})
+
+
+
+// ML model comparison charts
+new Chart(document.getElementById('mlClassCompareChart'),{
+  type:'bar',
+  data:{labels:['Propensity Logistic','Propensity Value/Freq','Churn Low-Value','Churn Logistic'],
+    datasets:[
+      {label:'AUC',data:[0.4565,0.4316,0.5038,0.4995],backgroundColor:'#2563EB',borderRadius:4},
+      {label:'F1',data:[0.0364,0.1663,0.4262,0.5512],backgroundColor:'#DB2777',borderRadius:4}
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend},
+    scales:{y:{min:0,max:1,grid,ticks:{color:'#475569'}},x:{grid:{display:false},ticks:{color:'#475569',font:{size:10}}}}}
+})
+
+new Chart(document.getElementById('mlRoasAlgoChart'),{
+  type:'bar',
+  data:{labels:['Trend Projection','Lag-1 Naive','Channel Average','Rolling-3 Avg'],
+    datasets:[{label:'RMSE (lower is better)',data:[0.1238,0.1378,0.1516,0.1862],backgroundColor:['#16A34A','#0891B2','#D97706','#DC2626'],borderRadius:5}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+    scales:{y:{min:0,max:0.22,grid,ticks:{color:'#475569'},title:{display:true,text:'RMSE',color:'#475569'}},
+            x:{grid:{display:false},ticks:{color:'#475569',font:{size:10}}}}}
+})
+
+new Chart(document.getElementById('mlRoasForecastChart'),{
+  type:'bar',
+  data:{labels:['Google Ads','CM360','DV360','YouTube'],
+    datasets:[
+      {label:'June actual ROAS',data:[4.2,3.8,3.4,2.9],backgroundColor:clrs20,borderColor:clrs,borderWidth:1.5,borderRadius:4},
+      {label:'July forecast ROAS',data:[4.2571,3.8543,3.3114,2.9714],backgroundColor:clrs,borderRadius:4}
+    ]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend},
+    scales:{y:{min:0,max:5,grid,ticks:{color:'#475569'},title:{display:true,text:'ROAS',color:'#475569'}},
+            x:{grid:{display:false},ticks:{color:'#475569'}}}}
+})
+
+// Product performance scenario
+const topProducts = ['Bamboo Storage','LED Lamp','Bedding Bundle','Pantry Labels','Dinner Set','Shopper Totes','Towel Bundle','Desk Organiser','Kitchen Scale','Candle Duo']
+const topRevenue = [144800,106200,139900,55000,101900,38400,81300,58400,47500,29000]
+const worstProducts = ['Outdoor Beanbag','Terrarium','Luxury Throw','Kids Tees','Copper Bottle','Wall Clock','Pet Bed','Yoga Mat','Travel Mug','Vase']
+const worstRoas = [0.5,0.7,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6]
+
+new Chart(document.getElementById('topProductChart'),{
+  type:'bar',
+  data:{labels:topProducts,datasets:[{label:'Attributed revenue (ZAR)',data:topRevenue,backgroundColor:'#16A34A',borderRadius:5}]},
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{grid,ticks:{color:'#475569'}},y:{grid:{display:false},ticks:{color:'#475569',font:{size:10}}}}}
+})
+
+new Chart(document.getElementById('worstProductChart'),{
+  type:'bar',
+  data:{labels:worstProducts,datasets:[{label:'ROAS',data:worstRoas,backgroundColor:'#DC2626',borderRadius:5}]},
+  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{x:{min:0,max:3,grid,ticks:{color:'#475569'},title:{display:true,text:'ROAS',color:'#475569'}},
+            y:{grid:{display:false},ticks:{color:'#475569',font:{size:10}}}}}
 })
 
 // Fade in observer

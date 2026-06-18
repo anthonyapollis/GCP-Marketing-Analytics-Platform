@@ -1,0 +1,5 @@
+file_name,grain,purpose
+ml_model_registry.csv,one row per ML use case/model,"Documents model purpose, KPI, training table, target, and activation use."
+customer_ml_scores.csv,one row per customer,Purchase propensity and churn risk scores for activation audiences.
+next_best_product_recommendations.csv,one row per customer recommendation,"Next-best-product output for email, onsite modules, and remarketing."
+channel_roas_forecast.csv,one row per channel-month,Actual H1 ROAS plus July forecast and confidence bounds.

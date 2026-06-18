@@ -1,0 +1,26 @@
+metric,value,note
+raw_transactional_rows,41548,Bronze rows before validation and deduplication
+silver_clean_rows,40584,Rows accepted into the curated transactional layer
+quarantined_rows,964,Rows rejected but preserved for audit
+transactional_pass_rate,97.68%,Silver rows divided by raw transactional rows
+reject_reason_DUPLICATE_ORDER_ITEM_ID,240,Validation reject count
+reject_reason_DUPLICATE_ORDER_ID,201,Validation reject count
+reject_reason_DUPLICATE_CUSTOMER_ID,140,Validation reject count
+reject_reason_UNKNOWN_PRODUCT_ID,63,Validation reject count
+reject_reason_UNKNOWN_ORDER_ID,56,Validation reject count
+reject_reason_INVALID_ORDER_TOTAL,44,Validation reject count
+reject_reason_INVALID_QUANTITY,39,Validation reject count
+reject_reason_UNKNOWN_CUSTOMER_ID,38,Validation reject count
+reject_reason_DUPLICATE_TOUCHPOINT_ID,36,Validation reject count
+reject_reason_INVALID_MARGIN,29,Validation reject count
+reject_reason_INVALID_ORDER_DATE,27,Validation reject count
+reject_reason_INVALID_LINE_REVENUE,23,Validation reject count
+reject_reason_INVALID_ORDER_SUBTOTAL,18,Validation reject count
+reject_reason_DUPLICATE_PRODUCT_ID,5,Validation reject count
+reject_reason_MISSING_PRODUCT_NAME,3,Validation reject count
+reject_reason_INVALID_BASE_PRICE,2,Validation reject count
+reject_source_order_items_raw,428,Reject count by raw source table
+reject_source_orders_raw,328,Reject count by raw source table
+reject_source_customers_raw,140,Reject count by raw source table
+reject_source_campaign_touchpoints_raw,58,Reject count by raw source table
+reject_source_products_raw,10,Reject count by raw source table

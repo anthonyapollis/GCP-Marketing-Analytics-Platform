@@ -1,0 +1,31 @@
+product_id,sku,product_name,category,base_price_zar,gross_margin_pct,lead_campaign_channel,campaign_focus_flag,performance_group
+SKU-HOME-001,SKU-HOME-001,Bamboo Storage Set,Home Organisation,149.00,0.46,Google Ads,true,top_10
+SKU-HOME-002,SKU-HOME-002,Loadshedding LED Lamp,Home Essentials,229.00,0.41,Google Ads,true,top_10
+SKU-BED-001,SKU-BED-001,Cotton Bedding Bundle,Bedroom,699.00,0.38,CM360,true,top_10
+SKU-KIT-001,SKU-KIT-001,Airtight Pantry Labels,Kitchen,89.00,0.55,Google Ads,true,top_10
+SKU-KIT-002,SKU-KIT-002,Ceramic Dinner Set,Kitchen,599.00,0.34,CM360,true,top_10
+SKU-LIFE-001,SKU-LIFE-001,Reusable Shopper Totes,Lifestyle,79.00,0.52,Youtube,true,top_10
+SKU-BATH-001,SKU-BATH-001,Bath Towel Bundle,Bathroom,399.00,0.37,Google Ads,true,top_10
+SKU-WORK-001,SKU-WORK-001,Desk Organiser,Workspace,249.00,0.43,DV360,true,top_10
+SKU-KIT-003,SKU-KIT-003,Digital Kitchen Scale,Kitchen,219.00,0.39,Google Ads,true,top_10
+SKU-LIFE-002,SKU-LIFE-002,Scented Candle Duo,Lifestyle,119.00,0.49,Youtube,true,top_10
+SKU-OUT-001,SKU-OUT-001,Outdoor Beanbag,Outdoor,799.00,0.25,DV360,true,worst_10
+SKU-DEC-001,SKU-DEC-001,Glass Terrarium,Decor,329.00,0.31,DV360,true,worst_10
+SKU-BED-002,SKU-BED-002,Luxury Throw Blanket,Bedroom,549.00,0.29,CM360,true,worst_10
+SKU-LIFE-003,SKU-LIFE-003,Kids Tee Bundle,Lifestyle,189.00,0.36,Youtube,true,worst_10
+SKU-KIT-004,SKU-KIT-004,Copper Water Bottle,Kitchen,179.00,0.33,DV360,true,worst_10
+SKU-DEC-002,SKU-DEC-002,Minimal Wall Clock,Decor,289.00,0.32,CM360,true,worst_10
+SKU-PET-001,SKU-PET-001,Round Pet Bed,Pet,449.00,0.28,DV360,true,worst_10
+SKU-WELL-001,SKU-WELL-001,Yoga Mat,Wellness,259.00,0.35,Youtube,true,worst_10
+SKU-LIFE-004,SKU-LIFE-004,Insulated Travel Mug,Lifestyle,169.00,0.38,DV360,true,worst_10
+SKU-DEC-003,SKU-DEC-003,Decorative Vase,Decor,249.00,0.30,CM360,true,worst_10
+SKU-HOME-003,SKU-HOME-003,Foldable Laundry Basket,Home Organisation,159.00,0.42,Organic Search,false,supporting_catalog
+SKU-KIT-005,SKU-KIT-005,Silicone Utensil Set,Kitchen,139.00,0.48,Organic Search,false,supporting_catalog
+SKU-BATH-002,SKU-BATH-002,Soap Dispenser Set,Bathroom,129.00,0.44,Direct,false,supporting_catalog
+SKU-DEC-004,SKU-DEC-004,Linen Cushion Cover,Decor,149.00,0.36,Direct,false,supporting_catalog
+SKU-WORK-002,SKU-WORK-002,Cable Management Box,Workspace,199.00,0.41,Google Ads,false,supporting_catalog
+SKU-PET-002,SKU-PET-002,Pet Feeding Mat,Pet,119.00,0.40,Organic Search,false,supporting_catalog
+SKU-LIFE-005,SKU-LIFE-005,Weekend Cooler Bag,Lifestyle,299.00,0.34,Email,false,supporting_catalog
+SKU-HOME-004,SKU-HOME-004,Underbed Storage Bag,Home Organisation,189.00,0.43,Google Ads,false,supporting_catalog
+SKU-KIT-006,SKU-KIT-006,Reusable Food Wraps,Kitchen,99.00,0.50,Youtube,false,supporting_catalog
+SKU-BED-003,SKU-BED-003,Pillow Protector Pair,Bedroom,159.00,0.39,Email,false,supporting_catalog

@@ -74,6 +74,18 @@ marketing_pipeline_dag  (schedule: 04:00 UTC daily)
 
 ---
 
+## Platform Framing
+
+This portfolio is presented as a **GCP Marketing Analytics Platform** first:
+
+- BigQuery stores Bronze, Silver, and Gold layers.
+- Dataflow / Apache Beam validates dirty rows and writes quarantine outputs.
+- dbt builds typed Silver models and Gold reporting facts.
+- Airflow orchestrates the daily pipeline.
+- The dashboard, ebook, and workbook tell the GCP business story.
+
+Snowflake is included as a **validation and portability extension**. The curated data was replicated into `CAPE_CART_H1_GROWTH` with `RAW`, `SILVER`, `GOLD`, `ANALYTICS`, and `ML` schemas to prove that the model is warehouse-portable and to run a second ML workbench. ML metrics may not be numerically identical across GCP and Snowflake unless the feature store, labels, split window, algorithm, and thresholds are identical; the business conclusions should remain consistent.
+
 ## Project Structure
 
 ```
